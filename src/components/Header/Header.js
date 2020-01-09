@@ -24,8 +24,8 @@ const Header = () => (
             <Link to="/subpage/page1">
                 <FormattedMessage id="subpage.page1.title" />
             </Link>
-            <Link to="/subpage/subsubpage/page1">
-                <FormattedMessage id="subpage.subsubpage.page1.title" />
+            <Link to="/savethedate">
+                <FormattedMessage id="savethedate.title" />
             </Link>
             <LanguageSwitcher />
         </nav>

@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 
 import cs from "../../images/cs.png";
 import en from "../../images/en.png";
+import vi from "../../images/vi.png";
 
 import { languages, getLocalizedPath } from "../../i18n";
 
@@ -12,7 +13,8 @@ import "./LanguageSwitcher.sass";
 
 const flags = {
     cs,
-    en
+    en,
+    vi
 };
 
 const LanguageSwitcher = () => (
