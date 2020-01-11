@@ -20,11 +20,16 @@ const SaveTheDate = ({ intl }) => (
 
             <main className='save-the-date__main'>
                 <img className="save-the-date__image" src={camLilly} alt="Us" />
-                <div>
+                <div className='save-the-date__text-area'>
                     <h1>
                         <FormattedMessage id="savethedate.title" />
                     </h1>
-                    <FormattedHTMLMessage id="savethedate.main" tagName="div" />
+                    <FormattedMessage id="savethedate.main" tagName="div" />
+                    <FormattedMessage id="savethedate.date" tagName="div" />
+                    <p>Gertrude's</p>
+                    <p>10 Art Museum Dr.</p>
+                    <p>Baltimore, MD</p>
+
                     {/*<Link to="/">*/}
                     {/*    <FormattedMessage id="back.home" />*/}
                     {/*</Link>*/}

@@ -12,3 +12,7 @@ page1.title: "vietnamese"
 subpage.page1.title: "Podstránka 1"
 subpage.subsubpage.page1.title: "Podpodstránka 1"
 back.home: "Zpět na domovskou stránku"
+
+savethedate.title: "Lưu lại ngày"
+savethedate.main: "We're getting married!"
+savethedate.date: "September 27th, 2020"

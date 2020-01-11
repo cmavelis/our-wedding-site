@@ -10,9 +10,9 @@ home.main: '<h1>Homepage</h1>
     </ul>'
 footer.title: '© 2019, Built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>'
 page1.title: "Page 1"
-savethedate.title: "Save the Date"
+savethedate.title: "Save The Date"
 savethedate.main: "We're getting married!"
-savethedate.date: "September 27th, 2020"
+savethedate.date: "September 26th, 2020 at 6:00 PM"
 subpage.page1.title: "Subpage 1"
 subpage.subsubpage.page1.title: "Subsubpage 1"
 back.home: "Back to homepage"
