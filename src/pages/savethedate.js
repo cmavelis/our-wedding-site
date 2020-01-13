@@ -31,10 +31,12 @@ const SaveTheDate = ({ intl }) => (
                     </h1>
                     <p> are getting married!</p>
                     <br />
-                    <FormattedMessage id="savethedate.date" tagName="div" />
-                    <p>Gertrude's</p>
-                    <p>10 Art Museum Dr.</p>
-                    <p>Baltimore, MD</p>
+                    <div className='save-the-date__text-area--information'>
+                        <FormattedMessage id="savethedate.date" tagName="div" />
+                        <p>Gertrude's</p>
+                        <p>10 Art Museum Dr.</p>
+                        <p>Baltimore, MD</p>
+                    </div>
                     <br />
                     <p>Website to follow with more details</p>
 

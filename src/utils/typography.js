@@ -17,7 +17,10 @@ const typography = new Typography({
         "Cormorant Upright",
         "serif",
     ],
-    bodyFontFamily: ["Copperplate", "sans-serif"],
+    bodyFontFamily: [
+        "Cormorant Upright",
+        "serif",
+    ],
 });
 
 export default typography
