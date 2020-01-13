@@ -12,7 +12,7 @@ footer.title: '© 2019, Built with <a href="https://www.gatsbyjs.org/" target="_
 page1.title: "Page 1"
 savethedate.title: "Save The Date"
 savethedate.main: "We're getting married!"
-savethedate.date: "September 26th, 2020 at 6:00 PM"
+savethedate.date: "September 26th, 2020"
 subpage.page1.title: "Subpage 1"
 subpage.subsubpage.page1.title: "Subsubpage 1"
 back.home: "Back to homepage"

@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    overflow: auto;
 }
 
 p {
@@ -8,10 +9,19 @@ p {
     margin-block-end: 0;
 }
 
+// breakpoint: 760px ?
+
+@media (max-width: 870px) {
+    .save-the-date__image {
+        display: none;
+    }
+}
+
 .save-the-date {
     &__container {
+        background: url("../images/background.png");
+        background-size: cover;
         box-sizing: border-box;
-        background-color: antiquewhite;
         display: grid;
         grid-template-rows: auto 1fr auto;
         width: 100%;
@@ -27,7 +37,7 @@ p {
         justify-content: center;
     }
     &__image {
-        height: 400px;
+        height: 500px;
         margin: 0 2rem;
         border: 5px solid white;
         box-shadow: 0 0 8px rgba(0,0,0,.4);
@@ -41,8 +51,17 @@ p {
         flex-direction: row;
     }
     &__text-area {
-        margin: 2rem 0;
+        flex-shrink: 0;
+        background-image: linear-gradient(#FFF5D7, #ebe1c6);
+        margin: 1rem;
+        padding: 1.6rem;
         text-align: center;
-        width: 400px;
+        max-width: 300px;
+        box-shadow: 0 0 8px rgba(0,0,0,.4);
+        -moz-box-shadow: 0 0 8px rgba(0,0,0,.4);
+        -webkit-box-shadow: 0 0 8px rgba(0,0,0,.4);
+        > * {
+            opacity: 0.9;
+        }
     }
 }
