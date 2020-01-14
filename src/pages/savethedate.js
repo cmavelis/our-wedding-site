@@ -6,6 +6,8 @@ import LanguageSwitcher from "../components/LanguageSwitcher";
 import withLayout from "../layout";
 import withPageContext from "../pageContext";
 import camLilly from "../images/cam-lilly.jpeg";
+import BackgroundSection from "../layout/backgroundSection";
+
 
 import Link from "../components/LocalizedLink";
 import "../styles/saveTheDate.scss";
@@ -14,6 +16,7 @@ import "../styles/saveTheDate.scss";
 
 const SaveTheDate = ({ intl }) => (
     <React.Fragment>
+        <BackgroundSection>
 
         <div className='save-the-date__container'>
             {/*<div className='save-the-date__header'>*/}
@@ -49,6 +52,7 @@ const SaveTheDate = ({ intl }) => (
             <div className='save-the-date__footer'>
             </div>
         </div>
+        </BackgroundSection>
     </React.Fragment>
 );
 
