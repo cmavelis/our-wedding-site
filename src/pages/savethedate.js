@@ -24,8 +24,10 @@ const SaveTheDate = ({ intl }) => (
             {/*</div>*/}
 
             <main className='save-the-date__main'>
-                <img className="save-the-date__image" src={camLilly} alt="Us" />
-                <div className='save-the-date__text-area'>
+                <span className='save-the-date__floating-text'>Save the Date!</span>
+                <section className='save-the-date__image-and-text'>
+                    <img className="save-the-date__image" src={camLilly} alt="Us" />
+                    <div className='save-the-date__text-area'>
                     <h1>
                         <p>Lillian Nguyen</p>
                         <p>&</p>
@@ -48,6 +50,7 @@ const SaveTheDate = ({ intl }) => (
                     {/*    <FormattedMessage id="back.home" />*/}
                     {/*</Link>*/}
                 </div>
+                </section>
             </main>
             <footer className='save-the-date__footer'>
                 {/*<span>Background Image: Lillian Nguyen</span>*/}

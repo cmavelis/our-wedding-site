@@ -11,15 +11,19 @@ const typography = new Typography({
         {
             name: 'Roboto',
             styles: ['400',],
+        },
+        {
+            name: 'Lobster',
+            styles: ['400',],
         }
     ],
     headerFontFamily: [
         "Cormorant Upright",
         "serif",
     ],
+    //font-family: 'Lobster', cursive;
     bodyFontFamily: [
-        "Cormorant Upright",
-        "serif",
+        'Copperplate Light', 'Copperplate Gothic Light', 'serif'
     ],
 });
 
