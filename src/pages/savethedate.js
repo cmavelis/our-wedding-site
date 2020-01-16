@@ -16,7 +16,7 @@ import "../styles/saveTheDate.scss";
 
 const SaveTheDate = ({ intl }) => (
     <React.Fragment>
-        <BackgroundSection>
+        <BackgroundSection className='save-the-date__background'>
 
         <div className='save-the-date__container'>
             {/*<div className='save-the-date__header'>*/}
@@ -49,8 +49,9 @@ const SaveTheDate = ({ intl }) => (
                     {/*</Link>*/}
                 </div>
             </main>
-            <div className='save-the-date__footer'>
-            </div>
+            <footer className='save-the-date__footer'>
+                {/*<span>Background Image: Lillian Nguyen</span>*/}
+            </footer>
         </div>
         </BackgroundSection>
     </React.Fragment>

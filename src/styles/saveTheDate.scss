@@ -18,14 +18,15 @@ p {
 }
 
 .save-the-date {
-    &__container {
-        //background: url("../images/background.png");
+    &__background {
         background-size: cover;
         box-sizing: border-box;
-        display: grid;
-        grid-template-rows: auto 1fr auto;
         width: 100%;
         min-height: 100%;
+    }
+    &__container {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
     }
     &__header {
         box-sizing: border-box;
