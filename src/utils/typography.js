@@ -23,7 +23,9 @@ const typography = new Typography({
     ],
     //font-family: 'Lobster', cursive;
     bodyFontFamily: [
-        'Copperplate Light', 'Copperplate Gothic Light', 'serif'
+        // 'Copperplate Light', 'Copperplate Gothic Light', 'serif'
+        "Cormorant Upright",
+        "serif",
     ],
 });
 
