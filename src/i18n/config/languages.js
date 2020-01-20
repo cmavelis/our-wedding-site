@@ -7,7 +7,8 @@ module.exports = [
             "/page1": "/stranka1",
             "/subpage/page1": "/podstranka/stranka1",
             "/subpage/subsubpage/page1": "/podstranka/podpodstranka/stranka1",
-            "/savethedate": "/savethedate"
+            "/savethedate": "/savethedate",
+            "/background": "/background"
         }
     },
     {
@@ -19,7 +20,8 @@ module.exports = [
             "/page1": "/page1",
             "/subpage/page1": "/subpage/page1",
             "/subpage/subsubpage/page1": "/subpage/subsubpage/page1",
-            "/savethedate": "/savethedate"
+            "/savethedate": "/savethedate",
+            "/background": "/background"
         }
     },
     {
@@ -30,7 +32,8 @@ module.exports = [
             "/page1": "/page1",
             "/subpage/page1": "/subpage/page1",
             "/subpage/subsubpage/page1": "/subpage/subsubpage/page1",
-            "/savethedate": "/savethedate"
+            "/savethedate": "/savethedate",
+            "/background": "/background"
         }
     }
 ];
