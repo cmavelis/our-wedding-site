@@ -1,11 +1,17 @@
 html, body, #___gatsby {
     height: 100%;
+    overflow: auto;
 }
 
-body {
+html, body {
     margin: 0;
 }
 
 div[role="group"][tabindex] {
     height: 100%;
 }
+
+//@font-face {
+//    font-family: 'Market Deco';
+//    src: local('Market Deco'), url(../fonts/market_deco.ttf) format('truetype');
+//}
