@@ -20,7 +20,7 @@ export const query = graphql`
   query {
     file(relativePath: { eq: "cam-lilly.jpeg" }) {
       childImageSharp {
-        fixed(width: 375, height: 500) {
+        fixed(quality: 100, width: 375, height: 500) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -50,7 +50,7 @@ const SaveTheDate = ({ intl, data }) => (
                             <p>Cameron Avelis</p>
                             {/*<FormattedMessage id="savethedate.title" />*/}
                         </h1>
-                        <p> are getting married!</p>
+                        <p>are getting married!</p>
                         <br />
                         <div className='save-the-date__text-area--information'>
                             <FormattedMessage id="savethedate.date" tagName="div" />
