@@ -8,22 +8,28 @@ const typography = new Typography({
             name: 'Cormorant Upright',
             styles: ['700',],
         },
+        // {
+        //     name: 'Roboto',
+        //     styles: ['400',],
+        // },
+        // {
+        //     name: 'Lobster',
+        //     styles: ['400',],
+        // },
+        // {
+        //     name: 'Cinzel',
+        //     styles: ['400',],
+        // },
         {
-            name: 'Roboto',
-            styles: ['400',],
+            name: 'Playfair Display SC',
+            styles: ['700',],
         },
-        {
-            name: 'Lobster',
-            styles: ['400',],
-        }
     ],
     headerFontFamily: [
         "Cormorant Upright",
         "serif",
     ],
-    //font-family: 'Lobster', cursive;
     bodyFontFamily: [
-        // 'Copperplate Light', 'Copperplate Gothic Light', 'serif'
         "Cormorant Upright",
         "serif",
     ],

@@ -1,6 +1,9 @@
-html, body, #___gatsby {
-    height: 100%;
+html {
     overflow: auto;
+}
+
+html, body, #___gatsby, #gatsby-focus-wrapper {
+    height: 100%;
 }
 
 html, body {
