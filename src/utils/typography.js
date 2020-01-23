@@ -12,10 +12,10 @@ const typography = new Typography({
         //     name: 'Roboto',
         //     styles: ['400',],
         // },
-        // {
-        //     name: 'Lobster',
-        //     styles: ['400',],
-        // },
+        {
+            name: 'Lobster',
+            styles: ['400',],
+        },
         // {
         //     name: 'Cinzel',
         //     styles: ['400',],
