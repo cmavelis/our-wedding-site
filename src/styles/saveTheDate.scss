@@ -106,5 +106,55 @@ p {
         &--information {
             font-family: 'Playfair Display SC', 'Copperplate', serif;
         }
+
+        position: relative;
+        -webkit-transition: 1s ease-in-out;
+        -moz-transition: 1s ease-in-out;
+        -o-transition: 1s ease-in-out;
+        transition: 1s ease-in-out;
+        &-wrapper {
+            overflow: hidden;
+        }
     }
 }
+
+//.slide-up {
+//    animation: slide-up 0.5s forwards;
+//    -webkit-animation: slide-up 0.5s forwards;
+//}
+
+//.slide-down {
+//    animation: slide-up 0.5s backwards;
+//    -webkit-animation: slide-up 0.5s backwards;
+//}
+
+//.slide-down {
+//    animation: slide-down 0.5s forwards;
+//    -webkit-animation: slide-down 0.5s forwards;
+//}
+
+$up-position: -50%;
+$down-position: 0%;
+
+.slide-up {
+    transform: translateY($up-position);
+}
+//@keyframes slide-down {
+//    0% { transform: translateY($up-position); }
+//    100% { transform: translateY($down-position); }
+//}
+//
+//@-webkit-keyframes slide-down {
+//    0% { -webkit-transform: translateY($up-position); }
+//    100% { -webkit-transform: translateY($down-position); }
+//}
+//
+//@keyframes slide-up {
+//    0% { transform: translateY($down-position); }
+//    100% { transform: translateY($up-position); }
+//}
+//
+//@-webkit-keyframes slide-up {
+//    0% { -webkit-transform: translateY($down-position); }
+//    100% { -webkit-transform: translateY($up-position); }
+//}
