@@ -6,6 +6,7 @@ import Img from "gatsby-image"
 
 import withPageContext from "../pageContext";
 import BackgroundSection from "../layout/backgroundSection";
+import AddressForm from "../components/AddressForm";
 
 import "../styles/saveTheDate.scss";
 
@@ -43,26 +44,29 @@ const Index = ({ data }) => {
 
                             <div className='save-the-date__text-area-wrapper'>
                                 <div className={'save-the-date__text-area' + (slideUp ? ' slide-up' : '')}>
-                                    <h1>
-                                        <p>Lillian Nguyen</p>
-                                        <p>&</p>
-                                        <p>Cameron Avelis</p>
-                                    </h1>
-                                    <p>are getting married!</p>
-                                    <br />
-                                    <div className='save-the-date__text-area--information'>
-                                        <FormattedMessage id="savethedate.date" tagName="div" />
-                                        <p>Gertrude's</p>
-                                        <p>10 Art Museum Dr.</p>
-                                        <p>Baltimore, MD</p>
-                                    </div>
-                                    <br />
-                                    <p>full website to follow with more details</p>
-                                    <button onClick={handleClick}> click </button>
-                                    <br />
-                                    <br />
-                                    <br />
-                                    <p>I'm hidden below</p>
+                                    <section className='save-the-date__text-area--upper-section'>
+                                        <h1>
+                                            <p>Lillian Nguyen</p>
+                                            <p>&</p>
+                                            <p>Cameron Avelis</p>
+                                        </h1>
+                                        <p>are getting married!</p>
+                                        <br />
+                                        <div className='save-the-date__text-area--information'>
+                                            <FormattedMessage id="savethedate.date" tagName="div" />
+                                            <p>Gertrude's</p>
+                                            <p>10 Art Museum Dr.</p>
+                                            <p>Baltimore, MD</p>
+                                        </div>
+                                        <br />
+                                        <p>full details website to follow</p>
+                                    </section>
+                                    <section className='save-the-date__text-area--button-section'>
+                                        <button onClick={handleClick}> click </button>
+                                    </section>
+                                    <section className='save-the-date__text-area--lower-section'>
+                                        <AddressForm/>
+                                    </section>
                                 </div>
                             </div>
                         </section>

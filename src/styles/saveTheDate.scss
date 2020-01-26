@@ -14,18 +14,18 @@ p {
         margin-left: 0 !important;
     }
 }
-
+$content-vertical-margin: 35px;
+$content-height-shown: 500px;
+$content-min-width: 300px;
+$content-button-section: 90px;
 .save-the-date {
-    $content-vertical-margin: 35px;
-    $content-height: 500px;
-    $content-min-width: 300px;
     &__background {
         background-size: cover;
         box-sizing: border-box;
         width: 100%;
         min-width: $content-min-width + (2 * $content-vertical-margin);
         height: 100%;
-        min-height: $content-height + (2 * $content-vertical-margin);
+        min-height: $content-height-shown + (2 * $content-vertical-margin);
     }
     &__container {
         position: absolute;
@@ -85,7 +85,7 @@ p {
         //margin: auto;
         display: flex;
         flex-direction: row;
-        height: $content-height;
+        height: $content-height-shown;
         margin-left: 50px;
     }
     &__image {
@@ -93,68 +93,52 @@ p {
         margin: 0; // 2rem;
     }
     &__text-area {
+        $padding: 36px;
         min-height: 100%;
+        height: ($content-height-shown * 2) - $content-button-section;
         flex-shrink: 0;
-        background-image: linear-gradient(#FFF5D7, #ebe1c6); //#99a6ff, #c4aaff
+        background-image: linear-gradient(#FFF5D7, #d69e5b); //#99a6ff, #c4aaff
         margin: 0; //margin: 1rem;
-        padding: 2rem;
+        padding: $padding;
         text-align: center;
         max-width: $content-min-width;
+        overflow: hidden;
+        &-wrapper {
+            overflow: hidden;
+        }
         > * {
             opacity: 0.9;
         }
+
+        // animation stuff
+        $transition-time: 0.75s;
+        -webkit-transition: $transition-time ease-in-out;
+        -moz-transition: $transition-time ease-in-out;
+        -o-transition: $transition-time ease-in-out;
+        transition: $transition-time ease-in-out;
+
         &--information {
             font-family: 'Playfair Display SC', 'Copperplate', serif;
         }
 
-        position: relative;
-        -webkit-transition: 1s ease-in-out;
-        -moz-transition: 1s ease-in-out;
-        -o-transition: 1s ease-in-out;
-        transition: 1s ease-in-out;
-        &-wrapper {
-            overflow: hidden;
+        :not(.slide-up) > &--lower-section span { //for dashlane, but might cause conflicts if I use a span
+            display: none !important;
+        }
+
+        &--upper-section, &--lower-section {
+            height: $content-height-shown - $content-button-section - $padding;
+        }
+        &--button-section {
+            $button-height: 40px;
+            height: $content-button-section;
+            button {
+                height: $button-height;
+                margin: ($content-button-section - $button-height)/2;
+            }
         }
     }
 }
 
-//.slide-up {
-//    animation: slide-up 0.5s forwards;
-//    -webkit-animation: slide-up 0.5s forwards;
-//}
-
-//.slide-down {
-//    animation: slide-up 0.5s backwards;
-//    -webkit-animation: slide-up 0.5s backwards;
-//}
-
-//.slide-down {
-//    animation: slide-down 0.5s forwards;
-//    -webkit-animation: slide-down 0.5s forwards;
-//}
-
-$up-position: -50%;
-$down-position: 0%;
-
 .slide-up {
-    transform: translateY($up-position);
+    transform: translateY(-($content-height-shown - $content-button-section));
 }
-//@keyframes slide-down {
-//    0% { transform: translateY($up-position); }
-//    100% { transform: translateY($down-position); }
-//}
-//
-//@-webkit-keyframes slide-down {
-//    0% { -webkit-transform: translateY($up-position); }
-//    100% { -webkit-transform: translateY($down-position); }
-//}
-//
-//@keyframes slide-up {
-//    0% { transform: translateY($down-position); }
-//    100% { transform: translateY($up-position); }
-//}
-//
-//@-webkit-keyframes slide-up {
-//    0% { -webkit-transform: translateY($down-position); }
-//    100% { -webkit-transform: translateY($up-position); }
-//}
