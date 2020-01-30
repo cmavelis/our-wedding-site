@@ -1,3 +1,12 @@
+button {
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+    &:hover {
+        color: white;
+    }
+}
+
 p {
     margin-block-start: 0;
     margin-block-end: 0;
@@ -7,7 +16,7 @@ p {
 // breakpoint: 760px ?
 
 @media (max-width: 870px) {
-    .save-the-date__floating-text, .save-the-date__image-and-text > :not(.save-the-date__text-area)  {
+    .save-the-date__floating-text, .save-the-date__image-and-text > :not(.save-the-date__text-area-wrapper)  {
         display: none !important;
     }
     .save-the-date__main  {
@@ -108,6 +117,9 @@ $content-button-section: 90px;
         }
         > * {
             opacity: 0.9;
+        }
+        button {
+            background-image: linear-gradient(#FFF5D7, #ffce80);
         }
 
         // animation stuff

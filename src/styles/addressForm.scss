@@ -1,0 +1,35 @@
+.address-form button {
+    &:hover {
+    //    clever hover animation
+    }
+}
+
+.address-form fieldset {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.address-form {
+    & input, textarea {
+        border: none;
+        //border-bottom: black 1px solid;
+        //background-color: transparent;
+        background: rgba(255, 245, 215, 0.21);
+
+        width: 80%;
+        margin: 20px auto;
+        padding: 0 5px;
+
+        &#address {
+            //text-align: center;
+            //vertical-align: bottom;
+            resize: none;
+            overflow: auto;
+            max-height: 7em;
+        }
+    }
+}
+
