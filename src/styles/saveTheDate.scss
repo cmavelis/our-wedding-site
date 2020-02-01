@@ -2,9 +2,6 @@ button {
     border-radius: 5px;
     border: none;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
-    &:hover {
-        color: white;
-    }
 }
 
 button, input, textarea {
@@ -129,7 +126,15 @@ $content-button-section: 90px;
             opacity: 0.9;
         }
         button {
-            background-image: linear-gradient(#FFF5D7, #ffce80);
+            $top-of-gradient: #FFF5D7;
+            $btm-of-gradient: #ffce80;
+            background-image: linear-gradient($top-of-gradient, $btm-of-gradient);
+            &:hover {
+                background-image: linear-gradient(darken($top-of-gradient, 5%), darken($btm-of-gradient, 5%));
+            }
+            &:active {
+                background-image: linear-gradient(darken($top-of-gradient, 10%), darken($btm-of-gradient, 10%));
+            }
         }
 
         // animation stuff
