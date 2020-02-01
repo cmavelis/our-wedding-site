@@ -6,7 +6,7 @@ const AddressForm = () => {
     const [name, setName] = useState('');
     const [address, setAddress] = useState('');
 
-    const apiUrl = 'http://cma-wedding-api.herokuapp.com/sample';
+    const apiUrl = 'https://cma-wedding-api.herokuapp.com/sample';
     const addressData = {
         name,
         email,
