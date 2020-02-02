@@ -28,6 +28,7 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 updating: false,
                 updateSuccess: true,
+                loading: false, //TODO: check this against JHipster stuff
                 // entity: action.payload.data
             };
 
