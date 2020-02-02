@@ -7,6 +7,8 @@ import Img from "gatsby-image"
 import withPageContext from "../pageContext";
 import BackgroundSection from "../layout/backgroundSection";
 import AddressForm from "../components/AddressForm";
+import useApiRequest from "../common/useApiRequest";
+
 
 import "../styles/saveTheDate.scss";
 import "../styles/addressForm.scss";
@@ -27,8 +29,10 @@ export const query = graphql`
 
 const Index = ({ data }) => {
     const [slideUp, setSlideUp] = useState(false);
+    const [wakeUpState, wakeUpRequest] = useApiRequest('https://cma-wedding-api.herokuapp.com/', {verb: 'get'});
 
     const handleClick = () => {
+        wakeUpRequest();
         setSlideUp(!slideUp);
     };
 

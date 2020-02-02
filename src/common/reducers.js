@@ -11,6 +11,7 @@ export const initialState = {
 
 export const actionTypes = {
     POST_ADDRESSES: 'addresses/POST_ADDRESSES',
+    WAKE_UP: 'misc/WAKE_UP',
 };
 
 const reducer = (state = initialState, action) => {

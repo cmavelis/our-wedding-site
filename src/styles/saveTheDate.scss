@@ -113,7 +113,6 @@ $content-button-section: 90px;
         min-height: 100%;
         height: ($content-height-shown * 2) - $content-button-section;
         flex-shrink: 0;
-        background-image: linear-gradient(#FFF5D7, #d69e5b); //#99a6ff, #c4aaff
         margin: 0; //margin: 1rem;
         padding: $padding;
         text-align: center;
@@ -121,6 +120,7 @@ $content-button-section: 90px;
         overflow: hidden;
         &-wrapper {
             overflow: hidden;
+            background-image: linear-gradient(#fff0e6, rgb(255, 207, 168)); //#99a6ff, #c4aaff
         }
         > * {
             opacity: 0.9;
