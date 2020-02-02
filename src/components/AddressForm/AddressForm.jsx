@@ -12,7 +12,7 @@ const AddressForm = () => {
         email,
         address,
     };
-    const [addressState, makeAddressRequest] = useApiRequest(apiUrl + 'sample', {verb: 'post', params: addressData});
+    const [addressState, makeAddressRequest] = useApiRequest(apiUrl + 'address', {verb: 'post', params: addressData});
 
     const handleSubmit = (e) => {
         e.preventDefault();
