@@ -64,10 +64,10 @@ const Index = ({ data }) => {
                                             <p>Baltimore, MD</p>
                                         </div>
                                         <br />
-                                        <p>full details website to follow</p>
+                                        <p>full website coming soon</p>
                                     </section>
                                     <section className='save-the-date__text-area--button-section'>
-                                        <button onClick={handleClick}> click </button>
+                                        <button onClick={handleClick}> more info </button>
                                     </section>
                                     <section className='save-the-date__text-area--lower-section'>
                                         <AddressForm/>

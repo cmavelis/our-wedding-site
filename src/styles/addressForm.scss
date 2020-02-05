@@ -1,3 +1,7 @@
+.address-form button {
+    margin-top: 20px;
+}
+
 .address-form fieldset {
     height: 300px;
     display: flex;
@@ -19,7 +23,7 @@
         background: rgba(255, 145, 18, 0.22);
 
         width: 80%;
-        margin: 17px auto;
+        margin: 0 auto 20px auto;
         padding: 0 5px;
 
         &#address {
@@ -29,6 +33,7 @@
             overflow: auto;
             height: 60px;
             flex-shrink: 0;
+            //margin-bottom: 30px;
         }
     }
 }

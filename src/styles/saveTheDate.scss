@@ -109,7 +109,7 @@ $content-button-section: 90px;
         margin: 0; // 2rem;
     }
     &__text-area {
-        $padding: 36px;
+        $padding: 35px;
         min-height: 100%;
         height: ($content-height-shown * 2) - $content-button-section;
         flex-shrink: 0;
