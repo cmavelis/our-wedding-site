@@ -14,6 +14,7 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <meta name="robots" content="noindex, nofollow" />
+        <title>Lillian and Cameron's Wedding Site</title>
         <TypographyStyle typography={typography} />
         <GoogleFont typography={typography} />
         {props.headComponents}
@@ -41,4 +42,4 @@ HTML.propTypes = {
   preBodyComponents: PropTypes.array,
   body: PropTypes.string,
   postBodyComponents: PropTypes.array,
-}
+};

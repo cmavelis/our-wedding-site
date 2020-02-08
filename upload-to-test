@@ -1,1 +1,2 @@
 scp -r public/* camave@cameronavelis.com:~/test.cameronavelis.com
+scp -r extras/* camave@cameronavelis.com:~/test.cameronavelis.com

@@ -1,0 +1,2 @@
+scp -r public/* camave@cameronavelis.com:~/lilliannguyen.cameronavelis.com
+scp -r extras/* camave@cameronavelis.com:~/lilliannguyen.cameronavelis.com
