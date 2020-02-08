@@ -14,6 +14,10 @@ div[role="group"][tabindex] {
     height: 100%;
 }
 
+fieldset {
+    border: none;
+}
+
 //@font-face {
 //    font-family: 'Market Deco';
 //    src: local('Market Deco'), url(../fonts/market_deco.ttf) format('truetype');

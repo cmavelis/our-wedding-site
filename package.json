@@ -1,9 +1,10 @@
 {
-    "name": "gatsby-starter-internationalized",
+    "name": "our-wedding-site",
     "description": "A starter for websites with internationalized content and routes",
     "version": "0.0.1",
     "author": "Marek Janča <marek-janca@volny.cz>",
     "dependencies": {
+        "axios": "^0.19.2",
         "gatsby": "^2.18.21",
         "gatsby-background-image": "^0.9.12",
         "gatsby-image": "^2.0.31",

@@ -1,30 +1,47 @@
+button {
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+button, input, textarea {
+    transition: all 0.3s ease;
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(255, 145, 18, 0.73);
+    }
+//    &:active {
+//        background-color: #c4aaff;
+//    }
+}
 p {
     margin-block-start: 0;
     margin-block-end: 0;
+    margin: 0;
 }
 
 // breakpoint: 760px ?
 
 @media (max-width: 870px) {
-    .save-the-date__floating-text, .save-the-date__image-and-text > :not(.save-the-date__text-area)  {
+    .save-the-date__floating-text, .save-the-date__image-and-text > :not(.save-the-date__text-area-wrapper)  {
         display: none !important;
     }
     .save-the-date__main  {
         margin-left: 0 !important;
     }
 }
-
+$content-vertical-margin: 35px;
+$content-height-shown: 500px;
+$content-min-width: 300px;
+$content-button-section: 90px;
 .save-the-date {
-    $content-vertical-margin: 35px;
-    $content-height: 500px;
-    $content-min-width: 300px;
     &__background {
         background-size: cover;
         box-sizing: border-box;
         width: 100%;
         min-width: $content-min-width + (2 * $content-vertical-margin);
         height: 100%;
-        min-height: $content-height + (2 * $content-vertical-margin);
+        min-height: $content-height-shown + (2 * $content-vertical-margin);
     }
     &__container {
         position: absolute;
@@ -84,7 +101,7 @@ p {
         //margin: auto;
         display: flex;
         flex-direction: row;
-        height: $content-height;
+        height: $content-height-shown;
         margin-left: 50px;
     }
     &__image {
@@ -92,18 +109,63 @@ p {
         margin: 0; // 2rem;
     }
     &__text-area {
+        $padding: 35px;
         min-height: 100%;
+        height: ($content-height-shown * 2) - $content-button-section;
         flex-shrink: 0;
-        background-image: linear-gradient(#FFF5D7, #ebe1c6); //#99a6ff, #c4aaff
         margin: 0; //margin: 1rem;
-        padding: 2rem;
+        padding: $padding;
         text-align: center;
         max-width: $content-min-width;
+        overflow: hidden;
+        &-wrapper {
+            overflow: hidden;
+            background-image: linear-gradient(#fff0e6, rgb(255, 207, 168)); //#99a6ff, #c4aaff
+        }
         > * {
             opacity: 0.9;
         }
+        button {
+            $top-of-gradient: #FFF5D7;
+            $btm-of-gradient: #ffce80;
+            background-image: linear-gradient($top-of-gradient, $btm-of-gradient);
+            &:hover {
+                background-image: linear-gradient(darken($top-of-gradient, 5%), darken($btm-of-gradient, 5%));
+            }
+            &:active {
+                background-image: linear-gradient(darken($top-of-gradient, 10%), darken($btm-of-gradient, 10%));
+            }
+        }
+
+        // animation stuff
+        $transition-time: 0.75s;
+        -webkit-transition: $transition-time ease-in-out;
+        -moz-transition: $transition-time ease-in-out;
+        -o-transition: $transition-time ease-in-out;
+        transition: $transition-time ease-in-out;
+
         &--information {
             font-family: 'Playfair Display SC', 'Copperplate', serif;
         }
+
+        :not(.slide-up) > &--lower-section span { //for dashlane, but might cause conflicts if I use a span
+            display: none !important;
+        }
+
+        &--upper-section, &--lower-section {
+            height: $content-height-shown - $content-button-section - $padding;
+        }
+        &--button-section {
+            $button-height: 40px;
+            height: $content-button-section;
+            button {
+                max-height: $button-height;
+                margin: ($content-button-section - $button-height)/2;
+            }
+        }
     }
+}
+
+.slide-up {
+    transform: translateY(-($content-height-shown - $content-button-section));
 }
