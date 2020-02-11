@@ -1,2 +1,6 @@
+npm run build
+
+ssh camave@cameronavelis.com rm -rf lilliannguyen.cameronavelis.com/*
+
 scp -r public/* camave@cameronavelis.com:~/lilliannguyen.cameronavelis.com
-scp -r extras/* camave@cameronavelis.com:~/lilliannguyen.cameronavelis.com
+scp -r extras/.htaccess camave@cameronavelis.com:~/lilliannguyen.cameronavelis.com
