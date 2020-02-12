@@ -12,10 +12,14 @@ const withLayout = Component => {
     const WrapperComponent = props => {
         return (
             <React.Fragment>
-                <BackgroundSection className='bg'/>
-                <Header />
-                <Component {...props} />
-                <Footer />
+                {/*<BackgroundSection className='bg'/>*/}
+                <div id="page-container">
+                    <Header />
+                    <div id="content-wrap" >
+                        <Component {...props} />
+                    </div>
+                    <Footer />
+                </div>
             </React.Fragment>
         );
     };

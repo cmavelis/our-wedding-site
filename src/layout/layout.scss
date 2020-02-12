@@ -1,0 +1,18 @@
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+$footer-height: 2.5rem;
+
+#content-wrap {
+    padding: 1rem 1rem $footer-height;
+    text-align: center;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: $footer-height;
+    text-align: center;
+}

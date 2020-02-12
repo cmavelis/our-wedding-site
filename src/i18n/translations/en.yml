@@ -8,7 +8,7 @@ home.main: '<h1>Homepage</h1>
     <li><a href="https://www.gatsbyjs.org/starters/gatsbyjs/gatsby-starter-default/" >Gatsby Starter Default</a>
     <li><a href="https://www.gatsbyjs.org/starters/tomekskuta/gatsby-starter-intl/" >Gatsby Starter Intl</a>
     </ul>'
-footer.title: '© 2019, Built with <a href="https://www.gatsbyjs.org/" target="_blank">Gatsby</a>'
+footer.title: 'Built by Cameron Avelis and Lillian Nguyen'
 page1.title: "Page 1"
 savethedate.title: "Save The Date"
 savethedate.main: "We're getting married!"

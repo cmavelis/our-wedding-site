@@ -27,7 +27,7 @@ const Header = () => (
             <Link to="/savethedate">
                 <FormattedMessage id="savethedate.title" />
             </Link>
-            <LanguageSwitcher />
+            {/*<LanguageSwitcher />*/}
         </nav>
     </header>
 );
