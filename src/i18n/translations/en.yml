@@ -9,7 +9,11 @@ home.main: '<h1>Homepage</h1>
     <li><a href="https://www.gatsbyjs.org/starters/tomekskuta/gatsby-starter-intl/" >Gatsby Starter Intl</a>
     </ul>'
 footer.title: 'Built by Cameron Avelis and Lillian Nguyen'
-page1.title: "Page 1"
+
+page1.title: "Lodging"
+lodging.header1: "Hotel Revival"
+lodging.body1: "We have all these rooms for ya"
+
 savethedate.title: "Save The Date"
 savethedate.main: "We're getting married!"
 savethedate.date: "September 26th, 2020"

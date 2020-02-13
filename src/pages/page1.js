@@ -17,6 +17,14 @@ const Page1 = ({ intl }) => (
             <h1>
                 <FormattedMessage id="page1.title" />
             </h1>
+            <section>
+                <h3>
+                    <FormattedMessage id="lodging.header1" />
+                </h3>
+                <p>
+                    <FormattedMessage id="lodging.body1" />
+                </p>
+            </section>
             <Link to="/">
                 <FormattedMessage id="back.home" />
             </Link>
