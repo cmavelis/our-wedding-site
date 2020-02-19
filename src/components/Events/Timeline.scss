@@ -1,0 +1,61 @@
+$node-size: 30px;
+$node-border: 1px;
+$node-total-width: $node-size;
+
+$line-width: 4px;
+$grid-h-gap: 20px;
+
+.timeline--grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: auto auto;
+    grid-gap: $grid-h-gap;
+    align-items: start;
+    justify-content: center;
+    z-index: 1;
+}
+
+.timeline--event-graphic-container {
+    position: relative;
+    height: 100%;
+    //height: $node-size;
+    //width: $node-size;
+}
+
+.timeline--event-connector {
+    //height: $node-size + ($grid-h-gap * 2);
+    height: 150%;
+    width: $line-width;
+    background-color: black;
+    position: absolute;
+    left: ($node-total-width - $line-width)/2;
+    top: 0;
+    z-index: 0;
+}
+
+.timeline--event-dot {
+    justify-self: start;
+    position: relative;
+    display: inline-block;
+    width: $node-size;
+    height: $node-size;
+    border-radius: $node-size/2;
+    color: white;
+    background-color: #745eff;
+    border: 1px solid black;
+    z-index: 3;
+}
+
+.timeline--event-time {
+    justify-self: end;
+}
+
+.timeline--event-title {
+    padding-top: $node-size - 9px;
+}
+
+.timeline--event-description {
+    text-align: left;
+    justify-self: start;
+    max-width: 500px;
+}

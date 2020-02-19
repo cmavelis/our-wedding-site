@@ -13,6 +13,8 @@ footer.title: 'Built by Cameron Avelis and Lillian Nguyen'
 page1.title: "Lodging"
 lodging.header1: "Hotel Revival"
 lodging.body1: "We have all these rooms for ya"
+lodging.header2: "Days Inn"
+lodging.body2: "These too"
 
 savethedate.title: "Save The Date"
 savethedate.main: "We're getting married!"

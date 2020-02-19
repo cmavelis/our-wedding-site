@@ -18,14 +18,11 @@ const Header = () => (
             <Link to="/">
                 <FormattedMessage id="home.title" />
             </Link>
-            <Link to="/page1">
+            <Link to="/lodging">
                 <FormattedMessage id="page1.title" />
             </Link>
             <Link to="/subpage/page1">
                 <FormattedMessage id="subpage.page1.title" />
-            </Link>
-            <Link to="/savethedate">
-                <FormattedMessage id="savethedate.title" />
             </Link>
             {/*<LanguageSwitcher />*/}
         </nav>
