@@ -8,10 +8,10 @@ const typography = new Typography({
             name: 'Cormorant Upright',
             styles: ['700',],
         },
-        // {
-        //     name: 'Roboto',
-        //     styles: ['400',],
-        // },
+        {
+            name: 'Roboto',
+            styles: ['400',],
+        },
         {
             name: 'Lobster',
             styles: ['400',],
@@ -30,8 +30,8 @@ const typography = new Typography({
         "serif",
     ],
     bodyFontFamily: [
-        "Cormorant Upright",
-        "serif",
+        "Roboto",
+        "sans-serif",
     ],
 });
 

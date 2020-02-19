@@ -2,7 +2,7 @@ import React from "react";
 import { FormattedHTMLMessage } from "react-intl";
 
 const Footer = () => (
-    <footer>
+    <footer id="footer">
         <FormattedHTMLMessage id="footer.title" />
     </footer>
 );

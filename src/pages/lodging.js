@@ -8,7 +8,7 @@ import withPageContext from "../pageContext";
 
 import Link from "../components/LocalizedLink";
 
-const Page1 = ({ intl }) => (
+const Lodging = ({ intl }) => (
     <React.Fragment>
         <Helmet>
             <title>{intl.formatMessage({ id: "page1.title" })}</title>
@@ -17,14 +17,30 @@ const Page1 = ({ intl }) => (
             <h1>
                 <FormattedMessage id="page1.title" />
             </h1>
-            <Link to="/">
-                <FormattedMessage id="back.home" />
-            </Link>
+            <section>
+                <h3>
+                    <FormattedMessage id="lodging.header1" />
+                </h3>
+                <p>
+                    <FormattedMessage id="lodging.body1" />
+                </p>
+            </section>
+            <section>
+                <h3>
+                    <FormattedMessage id="lodging.header2" />
+                </h3>
+                <p>
+                    <FormattedMessage id="lodging.body2" />
+                </p>
+            </section>
+            {/*<Link to="/">*/}
+            {/*    <FormattedMessage id="back.home" />*/}
+            {/*</Link>*/}
         </main>
     </React.Fragment>
 );
 
-Page1.propTypes = {
+Lodging.propTypes = {
     intl: intlShape.isRequired
 };
 
@@ -32,4 +48,4 @@ export default compose(
     withPageContext,
     withLayout,
     injectIntl
-)(Page1);
+)(Lodging);
