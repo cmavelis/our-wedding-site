@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 import withPageContext from "../pageContext";
 import withLayout from "../layout";
 import BackgroundSection from "../layout/backgroundSection";
-import Timeline from "../components/Events";
+import Timeline from "../components/Timeline";
 import useApiRequest from "../common/useApiRequest";
 
 
