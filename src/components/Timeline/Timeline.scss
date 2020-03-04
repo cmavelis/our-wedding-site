@@ -15,14 +15,14 @@ $grid-h-gap: 20px;
     z-index: 1;
 }
 
-.timeline--event-graphic-container {
+.timeline--item-graphic-container {
     position: relative;
     height: 100%;
     //height: $node-size;
     //width: $node-size;
 }
 
-.timeline--event-connector {
+.timeline--item-connector {
     //height: $node-size + ($grid-h-gap * 2);
     height: 150%;
     width: $line-width;
@@ -33,7 +33,7 @@ $grid-h-gap: 20px;
     z-index: 0;
 }
 
-.timeline--event-dot {
+.timeline--item-dot {
     justify-self: start;
     position: relative;
     display: inline-block;
@@ -46,15 +46,15 @@ $grid-h-gap: 20px;
     z-index: 3;
 }
 
-.timeline--event-time {
+.timeline--item-time {
     justify-self: end;
 }
 
-.timeline--event-title {
+.timeline--item-title {
     padding-top: $node-size - 9px;
 }
 
-.timeline--event-description {
+.timeline--item-description {
     text-align: left;
     justify-self: start;
     max-width: 500px;
