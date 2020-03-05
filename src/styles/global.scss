@@ -22,6 +22,16 @@ body {
     background-color: #fff0e6;
 }
 
+main.standard-page {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+main.standard-page > section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
 //@font-face {
 //    font-family: 'Market Deco';
 //    src: local('Market Deco'), url(../fonts/market_deco.ttf) format('truetype');

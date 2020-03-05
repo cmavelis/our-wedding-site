@@ -8,37 +8,48 @@ import withPageContext from "../pageContext";
 
 import Link from "../components/LocalizedLink";
 
-const Lodging = ({ intl }) => (
-    <React.Fragment>
-        <Helmet>
-            <title>{intl.formatMessage({ id: "page1.title" })}</title>
-        </Helmet>
-        <main>
-            <h1>
-                <FormattedMessage id="page1.title" />
-            </h1>
-            <section>
-                <h3>
-                    <FormattedMessage id="lodging.header1" />
-                </h3>
-                <p>
-                    <FormattedMessage id="lodging.body1" />
-                </p>
-            </section>
-            <section>
-                <h3>
-                    <FormattedMessage id="lodging.header2" />
-                </h3>
-                <p>
-                    <FormattedMessage id="lodging.body2" />
-                </p>
-            </section>
-            {/*<Link to="/">*/}
-            {/*    <FormattedMessage id="back.home" />*/}
-            {/*</Link>*/}
-        </main>
-    </React.Fragment>
-);
+const Lodging = ({ intl }) => {
+    const idBase = [
+        'lodging1',
+        'lodging2',
+    ];
+    const idFields = [
+        'description',
+        'price',
+        'location',
+        'who'
+    ];
+    const numberHotels = 2;
+
+    return(
+        <React.Fragment>
+            <Helmet>
+                <title>{intl.formatMessage({ id: "page1.title" })}</title>
+            </Helmet>
+            <main className="standard-page">
+                <h1>
+                    <FormattedMessage id="page1.title" />
+                </h1>
+                {idBase.map(
+                    baseString => (
+                        <section>
+                            <h3><FormattedMessage id={baseString + '.header'} /></h3>
+                            {idFields.map(
+                                fieldString => (
+                                    <p><FormattedMessage id={baseString + '.' + fieldString} /></p>
+                                )
+                            )}
+                        </section>
+                    )
+                )}
+
+                {/*<Link to="/">*/}
+                {/*    <FormattedMessage id="back.home" />*/}
+                {/*</Link>*/}
+            </main>
+        </React.Fragment>
+    );
+};
 
 Lodging.propTypes = {
     intl: intlShape.isRequired

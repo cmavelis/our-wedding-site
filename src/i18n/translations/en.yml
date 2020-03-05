@@ -11,10 +11,17 @@ home.main: '<h1>Homepage</h1>
 footer.title: 'Built by Cameron Avelis and Lillian Nguyen'
 
 page1.title: "Lodging"
-lodging.header1: "Hotel Revival"
-lodging.body1: "We have all these rooms for ya"
-lodging.header2: "Days Inn"
-lodging.body2: "These too"
+lodging1.header: "Hotel Revival"
+lodging1.description: "Hotel Revival is a hip hotel in a part of town that we really love. Hotel Revival has a great tiki bar in the Garden Room on the top floor, with views of the entire city."
+lodging1.price: "$189 per night plus tax for the King Deluxe room, with one king bed"
+lodging1.location: "Mount Vernon, our favorite neighborhood for going out. There's lots of great bars and restaurants, and beautiful architecture. Very close to the starting point of Bike Party, and also right along the Maryland Ave protected bike path. Two miles from the wedding location."
+lodging1.who: "If you like going out for good food and drink, or just walking around a historic neighborhood."
+
+lodging2.header: "Days Inn"
+lodging2.description: "We've also reserved a hotel block at the Days Inn, a basic and comfortable hotel in the tourist center of the city."
+lodging2.price: "$107 per night for the Standard room with two full beds"
+lodging2.location: " Inner Harbor, the tourist center of the city. Right along the Maryland Ave protected bike path, so you could get to Bike Party easily. Three miles from the wedding location."
+lodging2.who: "If you want to be around the water, or if you have kids that you want to take to attractions such as the Maryland Science Center or National Aquarium."
 
 savethedate.title: "Save The Date"
 savethedate.main: "We're getting married!"
