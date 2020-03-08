@@ -24,6 +24,9 @@ const Header = () => (
             <Link to="/subpage/page1">
                 <FormattedMessage id="subpage.page1.title" />
             </Link>
+            <Link to="/rsvp">
+                RSVP
+            </Link>
             {/*<LanguageSwitcher />*/}
         </nav>
     </header>
