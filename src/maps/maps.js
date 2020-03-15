@@ -16,14 +16,24 @@ var redIcon = new L.Icon({
     shadowSize: [41, 41]
   });
 
-var greenIcon = new L.Icon({
-    iconUrl: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png",
+var goldIcon = new L.Icon({
+    iconUrl: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png",
     shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
     shadowSize: [41, 41]
   });
+
+var orangeIcon = new L.Icon({
+    iconUrl: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png",
+    shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+    shadowSize: [41, 41]
+  });
+
 
 //   events
 
@@ -35,23 +45,23 @@ bikeparty.bindPopup("<b>St Mary's Park</b><br /><em>601 N Paca St</em><br />Star
 
 // accomodations
 
-var revival = L.marker([39.2975,-76.617], {icon: greenIcon});
+var revival = L.marker([39.2975,-76.617], {icon: goldIcon});
 revival.bindPopup("<b>Hotel Revival</b><br /><em>101 W Monument St</em><br />Hotel block reserved")
 
-var daysinn = L.marker([39.287,-76.6203], {icon: greenIcon});
+var daysinn = L.marker([39.287,-76.6203], {icon: goldIcon});
 daysinn.bindPopup("<b>Days Inn</b><br /><em>100 Hopkins Plaza</em><br />Hotel block reserved")
 
 var hampden = L.circle([39.330,-76.632], {
-    color: "green",
-    fillColor: "green",
+    color: "gold",
+    fillColor: "gold",
     fillOpacity: 0.5,
     radius: 700
 });
 hampden.bindPopup("<b>Hampden</b><br /><em>Neighborhood</em><br />Suggested Airbnb neighborhood")
 
 var vernonmidtown = L.circle([39.305,-76.619], {
-    color: "green",
-    fillColor: "green",
+    color: "gold",
+    fillColor: "gold",
     fillOpacity: 0.5,
     radius: 700
 });
@@ -62,7 +72,7 @@ var accomod = L.layerGroup([revival, daysinn, hampden, vernonmidtown]).addTo(map
 var foodInfo = {
     charmery: {
         name: "The Charmery",
-        coord: [39.331,-76.632],
+        coord: [39.331,-76.629],
         address: "801 W 36th St",
         link: "",
         tag: "Ice cream parlor",
@@ -70,7 +80,7 @@ var foodInfo = {
     },
     clavel: {
         name: "Clavel",
-        coord: [39.315,-76.623],
+        coord: [39.315,-76.622],
         address: "225 W 23rd St",
         link: "",
         tag: "Mexican restaurant",
@@ -78,25 +88,25 @@ var foodInfo = {
     },
     doobys: {
         name: "Dooby's",
-        coord: [],
-        address: "",
-        link: "",
+        coord: [39.299,-76.616],
+        address: "802 N Charles St",
+        link: "http://doobys.com",
         tag: "Asian fusion restaurant",
         desc: "This place does it all, to our delight and Lindsey's confusion. Grab coffee and pastries in the morning, noodles or sandwiches for lunch, and maybe a drink in the evening."
     },
     dukem: {
         name: "Dukem",
-        coord: [39.303,-76.620],
+        coord: [39.303,-76.617],
         address: "1100 Maryland Ave",
-        link: "",
+        link: "http://dukemrestaurant.com",
         tag: "Ethiopian restaurant",
         desc: "One of our regular spots, and a good option for vegetarians. We recommend getting a combination platter to share."
     },
     ekiben: {
         name: "Ekiben",
-        coord: [],
-        address: "",
-        link: "",
+        coord: [39.331,-76.631],
+        address: "911 W 36th St",
+        link: "http://ekibenbaltimore.com",
         tag: "Asian fusion restaurant",
         desc: "Probably one of the most beloved restaurants in Baltimore. Tiny place with great bao and limited seating. The Tofu Brah is delicious, as are their meaty options."
     },
@@ -118,11 +128,11 @@ var foodInfo = {
     },
     laCuchara: {
         name: "La Cuchara",
-        coord: [],
-        address: "",
-        link: "",
+        coord: [39.331,-76.643],
+        address: "3600 Clipper Mill Rd",
+        link: "http://lacucharabaltimore.com",
         tag: "Spanish restaurant",
-        desc: "Lillian loves the patatas bravas here. We considered this place for our wedding venue. It has an excellent late night happy hour."
+        desc: "We love the patatas bravas here. We considered this place for our wedding venue. It has an excellent late night happy hour."
     },
     landOfKush: {
         name: "Land of Kush",
@@ -150,9 +160,9 @@ var foodInfo = {
     },
     orto: {
         name: "Orto",
-        coord: [],
-        address: "",
-        link: "",
+        coord: [39.309,-76.616],
+        address: "1709 N Charles St, Baltimore, MD 21201",
+        link: "http://ortobaltimore.com",
         tag: "Italian restaurant",
         desc: "A small, modern Italian restaurant with good cocktails."
     },
@@ -166,7 +176,7 @@ var foodInfo = {
     },
     woodberry: {
         name: "Woodberry Kitchen",
-        coord: [39.271,-76.601],
+        coord: [39.332,-76.646],
         address: "2010 Clipper Park Rd",
         link: "",
         tag: "Chesapeake Bay restaurant",
@@ -176,7 +186,15 @@ var foodInfo = {
 
 
 var drinkInfo = {
-    gardenroom: {
+    dutchCourage: {
+        name: "Dutch Courage",
+        coord: [39.315,-76.617],
+        address: "2229 N Charles St",
+        link: "",
+        tag: "Cocktail bar",
+        desc: "This is a new gin-focused bar that we're really excited about."
+    },
+    gardenRoom: {
         name: "Garden Room at Hotel Revival",
         coord: [],
         address: "",
@@ -229,7 +247,7 @@ var drinkInfo = {
 var foodMarkers = [];
 for (let [key, subObject] of Object.entries(foodInfo)) {
     if (subObject.coord.length === 2) {
-        let newMarker = L.marker(subObject.coord, {icon: greenIcon})
+        let newMarker = L.marker(subObject.coord)
         newMarker.bindPopup(`<b>${subObject.name}</b><br /><em>${subObject.address}</em><br />${subObject.tag}`)
         foodMarkers.push(newMarker)
     }
@@ -237,17 +255,23 @@ for (let [key, subObject] of Object.entries(foodInfo)) {
 
 var food = L.layerGroup(foodMarkers).addTo(map);
 
+var drinkMarkers = [];
+for (let [key, subObject] of Object.entries(drinkInfo)) {
+    if (subObject.coord.length === 2) {
+        let newMarker = L.marker(subObject.coord, {icon: orangeIcon})
+        newMarker.bindPopup(`<b>${subObject.name}</b><br /><em>${subObject.address}</em><br />${subObject.tag}`)
+        drinkMarkers.push(newMarker)
+    }
+}
 
-// food
-
-//   var obj = L.marker(foodInfo[i].coord);
-//   obj.bindPopup(`<b>${foodInfo[i].name}</b><br /><em>${foodInfo[i].address}</em><br />test`).addTo(map);
+var drink = L.layerGroup(drinkMarkers).addTo(map);
 
 // overlays
 
 var overlayMaps = {
     "Accomodations": accomod,
-    "Food": food
+    "Food": food,
+    "Drink": drink
 };
 
 L.control.layers(overlayMaps).addTo(map);
