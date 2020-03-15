@@ -6,8 +6,6 @@ import { compose } from "recompose";
 import withLayout from "../layout";
 import withPageContext from "../pageContext";
 
-import Link from "../components/LocalizedLink";
-
 const Lodging = ({ intl }) => {
     const idBase = [
         'lodging1',
@@ -19,7 +17,6 @@ const Lodging = ({ intl }) => {
         'location',
         'who'
     ];
-    const numberHotels = 2;
 
     return(
         <React.Fragment>
@@ -34,11 +31,14 @@ const Lodging = ({ intl }) => {
                     baseString => (
                         <section>
                             <h3><FormattedMessage id={baseString + '.header'} /></h3>
+                            <ul className="no-decoration">
                             {idFields.map(
                                 fieldString => (
-                                    <p><FormattedMessage id={baseString + '.' + fieldString} /></p>
+                                    <li><strong>{fieldString.charAt(0).toUpperCase() + fieldString.substring(1) + ': '}</strong>
+                                        <FormattedMessage id={baseString + '.' + fieldString} /></li>
                                 )
                             )}
+                            </ul>
                         </section>
                     )
                 )}

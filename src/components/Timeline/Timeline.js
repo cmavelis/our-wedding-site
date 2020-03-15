@@ -2,27 +2,6 @@ import React from "react";
 
 import "./Timeline.scss";
 
-const eventData = [
-    {
-        date: 'Friday, September 25',
-        time: '7:00 PM',
-        name: 'Bike Party',
-        description: 'We ride bikes all over Baltimore for 2 hours.  Bike rentals and information will be added at a later date. Bike rentals and information will be added at a later date. Bike rentals and information will be added at a later date. '
-    },
-    {
-        date: 'Sat, September 26',
-        time: '6:00 PM',
-        name: 'Wedding Ceremony',
-        description: 'This is when we get married'
-    },
-    {
-        date: 'Sat, September 26',
-        time: '6:30 PM',
-        name: 'Wedding Reception',
-        description: 'This is for drinks and stuff'
-    }
-];
-
 const itemTypes = {
     GROUPING: 'grouping',
     EVENT: 'event'
@@ -38,8 +17,7 @@ const timelineData = [
         type: itemTypes.EVENT,
         label: '6:00 PM',
         header: 'Bike Party',
-        description: 'Bike Party leaves St. Mary\'s park around 7:00. ' +
-            'This item is a Baltimore favorite for us and our friends, so it would be great if you can join!'
+        description: 'Bike Party leaves St. Mary\'s park around 7:00. '
     },
     {
         type: itemTypes.GROUPING,
@@ -56,41 +34,24 @@ const timelineData = [
         type: itemTypes.EVENT,
         label: '6:30 PM',
         header: 'Cocktail Hour',
-        description: 'We will be taking some photos during this time, but feel free to mill about.'
+    },
+    {
+        type: itemTypes.EVENT,
+        label: '7:30 PM',
+        header: 'Dinner',
+    },
+    {
+        type: itemTypes.EVENT,
+        label: '8:30 PM',
+        header: 'Dancing',
+    },
+    {
+        type: itemTypes.EVENT,
+        label: '10:30 PM',
+        header: 'After-party',
+        description: 'The Gertrude\'s venue will close, but we will move to a TBD location.'
     }
 ];
-
-// const timelineData = [
-//     {
-//         groupingLabel: 'Friday',
-//         groupingHeader: 'September 25',
-//         items: [
-//             {
-//                 label: '6:00 PM',
-//                 header: 'Bike Party',
-//                 description: 'Bike Party leaves St. Mary\'s park around 7:00. ' +
-//                     'This item is a Baltimore favorite for us and our friends, so it would be great if you can join!'
-//             }
-//         ]
-//     },
-//     {
-//         groupingLabel: 'Saturday',
-//         groupingHeader: 'September 26',
-//         items: [
-//             {
-//                 label: '6:00 PM',
-//                 header: 'Wedding Ceremony',
-//                 description: 'The main ceremony at Gertrude\'s.  Doors open at 5:30'
-//             },
-//             {
-//                 label: '6:30 PM',
-//                 header: 'Cocktail Hour',
-//                 description: 'We will be taking some photos during this time, but feel free to mill about.'
-//             }
-//         ]
-//     },
-// ];
-
 
 const TimelineEvent = (props) => {
     const { item } = props;
