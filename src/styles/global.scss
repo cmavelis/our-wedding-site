@@ -19,7 +19,11 @@ fieldset {
 }
 
 body {
-    background-color: #fff0e6;
+    //background-color: #fff0e6;
+}
+
+ul.no-decoration {
+    list-style: none;
 }
 
 main.standard-page {
@@ -30,6 +34,7 @@ main.standard-page {
 main.standard-page > section {
     max-width: 600px;
     margin: 0 auto;
+    text-align: left;
 }
 
 //@font-face {
