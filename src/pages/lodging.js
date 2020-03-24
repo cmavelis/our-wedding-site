@@ -5,6 +5,7 @@ import { compose } from "recompose";
 
 import withLayout from "../layout";
 import withPageContext from "../pageContext";
+import MapComponent from "../maps/MapComponent";
 
 const Lodging = ({ intl }) => {
     const idBase = [
@@ -23,26 +24,33 @@ const Lodging = ({ intl }) => {
             <Helmet>
                 <title>{intl.formatMessage({ id: "page1.title" })}</title>
             </Helmet>
-            <main className="standard-page">
-                <h1>
-                    <FormattedMessage id="page1.title" />
-                </h1>
-                {idBase.map(
-                    baseString => (
-                        <section>
-                            <h3><FormattedMessage id={baseString + '.header'} /></h3>
-                            <ul className="no-decoration">
-                            {idFields.map(
-                                fieldString => (
-                                    <li><strong>{fieldString.charAt(0).toUpperCase() + fieldString.substring(1) + ': '}</strong>
-                                        <FormattedMessage id={baseString + '.' + fieldString} /></li>
-                                )
-                            )}
-                            </ul>
-                        </section>
-                    )
-                )}
+            <div className="two-columns">
+                <main className="standard-page ">
+                    <h1>
+                        <FormattedMessage id="page1.title" />
+                    </h1>
+                    {idBase.map(
+                        baseString => (
+                            <section key={baseString + '-key'}>
+                                <h3>
+                                    <FormattedMessage id={baseString + '.header'} />
+                                </h3>
+                                <ul className="no-decoration">
+                                {idFields.map(
+                                    fieldString => (
+                                        <li key={baseString + '-' + fieldString + '-key'}>
+                                            <strong>{fieldString.charAt(0).toUpperCase() + fieldString.substring(1) + ': '}</strong>
+                                            <FormattedMessage id={baseString + '.' + fieldString} />
+                                        </li>
+                                    )
+                                )}
+                                </ul>
+                            </section>
+                        )
+                    )}
             </main>
+                <div className="flex-grow map-container"><MapComponent/></div>
+            </div>
         </React.Fragment>
     );
 };

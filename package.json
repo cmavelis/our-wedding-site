@@ -16,6 +16,7 @@
         "gatsby-plugin-typography": "^2.3.21",
         "gatsby-source-filesystem": "^2.1.46",
         "gatsby-transformer-sharp": "^2.3.12",
+        "leaflet": "^1.6.0",
         "node-sass": "^4.12.0",
         "prop-types": "^15.7.2",
         "react": "^16.12.0",

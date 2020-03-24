@@ -37,6 +37,26 @@ main.standard-page > section {
     text-align: left;
 }
 
+.two-columns {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    main {
+        margin: 0 25px;
+    }
+    div#mapid {
+        margin: 0 25px;
+    }
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+div#mapid {
+    margin: 0 auto;
+}
+
 //@font-face {
 //    font-family: 'Market Deco';
 //    src: local('Market Deco'), url(../fonts/market_deco.ttf) format('truetype');
