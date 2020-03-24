@@ -56,7 +56,7 @@ const timelineData = [
 const TimelineEvent = (props) => {
     const { item } = props;
     return (
-    <React.Fragment className="timeline--item">
+    <React.Fragment>
         <span className="timeline--item-time">
             {item.type === itemTypes.GROUPING ? <h3>{item.label}</h3> : item.label}
         </span>
@@ -87,6 +87,7 @@ const Timeline = () => {
         <div className='timeline--grid'>
             {timelineData.map((item, index) => (
                     <TimelineEvent
+                        key={item.header}
                         item={item}
                         last={index === timelineData.length-1}
                     />
