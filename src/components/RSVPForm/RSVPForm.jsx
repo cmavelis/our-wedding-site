@@ -8,6 +8,8 @@ import {
     rsvpFormInitialState
 } from "./rsvpFormReducer";
 
+import "./rsvp.scss";
+
 const PersonInputGroup = (props) => {
     const {handleNameChange, handleRsvpChange, personState} = props;
     const {name, rsvp} = personState;
@@ -21,15 +23,21 @@ const PersonInputGroup = (props) => {
                 onChange={e => handleNameChange(e.target.value)}
             />
             {Object.values(RSVP_TYPES).map(
-                type => (
-                    <button
-                        key={`button-type-${type}`}
-                        type="button"
-                        onClick={() => handleRsvpChange(type)}
-                    >{type}</button>
-                )
+                type => {
+                    let buttonClassNames = `rsvp-button--${type}`;
+                    buttonClassNames = buttonClassNames.concat((type === rsvp) ? '' : ' rsvp-button--unselected' );
+                    return (
+                        <button
+                            className={buttonClassNames}
+                            key={`button-type-${type}`}
+                            type="button"
+                            onClick={() => handleRsvpChange(type)}
+                        >
+                            {type}
+                        </button>
+                    )
+                }
             )}
-            <span>{rsvp}</span>
         </div>
     )
 };
