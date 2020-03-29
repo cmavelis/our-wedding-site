@@ -1,17 +1,12 @@
 import React, { useState } from "react";
-import { graphql } from "gatsby"
 import {injectIntl, intlShape, FormattedMessage} from "react-intl";
 import { compose } from "recompose";
-import Img from "gatsby-image"
 
 import withPageContext from "../pageContext";
 import withLayout from "../layout";
-import BackgroundSection from "../layout/backgroundSection";
 import Timeline from "../components/Timeline";
 import useApiRequest from "../common/useApiRequest";
 
-
-// import "../styles/saveTheDate.scss";
 import "../styles/addressForm.scss";
 import "../styles/background.scss";
 

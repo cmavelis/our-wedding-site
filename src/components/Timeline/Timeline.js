@@ -70,7 +70,7 @@ const TimelineEvent = (props) => {
                     {item.header}
                 </strong>
                 :
-                <hline/>
+                <hr/>
             }
             <br/>
             {item.description ?? (
