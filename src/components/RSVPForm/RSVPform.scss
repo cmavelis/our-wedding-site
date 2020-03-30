@@ -1,0 +1,33 @@
+.rsvp-form {
+    button {
+        $top-of-gradient: #FFF5D7;
+        $btm-of-gradient: #ffce80;
+        background-image: linear-gradient($top-of-gradient, $btm-of-gradient);
+
+        &:hover {
+            background-image: linear-gradient(darken($top-of-gradient, 5%), darken($btm-of-gradient, 5%));
+        }
+
+        &:active {
+            background-image: linear-gradient(darken($top-of-gradient, 10%), darken($btm-of-gradient, 10%));
+        }
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.rsvp-button {
+    //&--yes {
+    //    background: green;
+    //}
+    //&--no {
+    //    background: red;
+    //}
+    //&--maybe {
+    //    background: yellow;
+    //}
+    &--unselected {
+        opacity: 0.5;
+    }
+}

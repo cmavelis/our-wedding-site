@@ -8,14 +8,14 @@ import {
     rsvpFormInitialState
 } from "./rsvpFormReducer";
 
-import "./rsvp.scss";
+import "./RSVPform.scss";
 
 const PersonInputGroup = (props) => {
     const {handleNameChange, handleRsvpChange, personState} = props;
     const {name, rsvp} = personState;
 
     return(
-        <div>
+        <div id='rsvp-form'>
             <input
                 name="name"
                 placeholder="Name"

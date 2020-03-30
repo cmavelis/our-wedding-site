@@ -57,6 +57,21 @@ div#mapid {
     margin: 0 auto;
 }
 
+button {
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+button, input, textarea {
+    transition: all 0.3s ease;
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(255, 145, 18, 0.73);
+    }
+}
+
 //@font-face {
 //    font-family: 'Market Deco';
 //    src: local('Market Deco'), url(../fonts/market_deco.ttf) format('truetype');
