@@ -44,7 +44,8 @@ const Lodging = ({ intl }) => {
                             return (
                                 <section key={baseString + '-key'}>
                                     <h3>
-                                    <FormattedMessage id={baseString + '.header'} />
+                                        <FormattedMessage id={baseString + '.header'} />
+                                        <a target='_blank' href={lodgingSource.url}>Book Here</a>
                                     </h3>
                                     <ul className="no-decoration">
                                     {idFields.map(
@@ -55,9 +56,6 @@ const Lodging = ({ intl }) => {
                                             </li>
                                         )
                                     )}
-                                        <li>
-                                            <a target='_blank' href={lodgingSource.url}>Book Here</a>
-                                        </li>
                                     </ul>
                                 </section>
                             )

@@ -74,6 +74,11 @@ button, input, textarea {
     }
 }
 
+h3 > a {
+    margin-left: 1.5rem;
+    color: $palette-orange
+}
+
 //@font-face {
 //    font-family: 'Market Deco';
 //    src: local('Market Deco'), url(../fonts/market_deco.ttf) format('truetype');
