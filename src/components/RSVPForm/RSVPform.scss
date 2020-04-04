@@ -1,6 +1,6 @@
 /* RGB */
 $palette-orange: rgba(218, 133, 90, 1);
-$palette-purple: rgba(61, 58, 95, 1);
+$palette-purple: lighten(rgba(61, 58, 95, 1), 40%);
 $palette-red: rgba(195, 49, 73, 1);
 $palette-green: rgba(168, 194, 86, 1);
 $palette-off-white: rgba(243, 217, 177, 1);
@@ -11,11 +11,11 @@ $palette-off-white: rgba(243, 217, 177, 1);
     background-image: linear-gradient($top-color, $btm-color);
 
     &:hover {
-        background-image: linear-gradient(darken($top-color, 10%), darken($btm-color, 10%));
+        background-image: linear-gradient(darken($top-color, 0%), darken($btm-color, 10%));
     }
 
     &:active {
-        background-image: linear-gradient(darken($top-color, 20%), darken($btm-color, 20%));
+        background-image: linear-gradient(darken($top-color, 5%), darken($btm-color, 20%));
     }
     &:focus {
         box-shadow: none;
@@ -39,6 +39,9 @@ $palette-off-white: rgba(243, 217, 177, 1);
     }
     &--maybe {
         @include button-gradient($palette-orange);
+    }
+    &--submit {
+        @include button-gradient($palette-purple);
     }
     &--unselected {
         opacity: 0.35;

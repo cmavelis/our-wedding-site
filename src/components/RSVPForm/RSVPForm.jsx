@@ -67,7 +67,7 @@ const RSVPForm = () => {
     // const addressData = {
     //     name,
     //     email,
-    //     address,
+    //     rsvpState,
     // };
     // const [addressState, makeAddressRequest] = useApiRequest(apiUrl + 'address', {verb: 'post', params: addressData});
 
@@ -83,16 +83,23 @@ const RSVPForm = () => {
             <input type="text" name="email" id="email" placeholder="email" onChange={e => setEmail(e.target.value)}/>
 
         </fieldset>
-        {rsvpState.map((obj, i) => {
-                return <PersonInputGroup
-                    key={`personInputs-${i}`}
-                    handleNameChange={onNameChange.bind(null, i)}
-                    handleRsvpChange={onRsvpChange.bind(null, i)}
-                    personState={obj}
-                />
-            }
-        )}
-        {/*<button onClick={e => handleSubmit(e)} >submit</button>*/}
+        <fieldset>
+            {rsvpState.map((obj, i) => {
+                    return <PersonInputGroup
+                        key={`personInputs-${i}`}
+                        handleNameChange={onNameChange.bind(null, i)}
+                        handleRsvpChange={onRsvpChange.bind(null, i)}
+                        personState={obj}
+                    />
+                }
+            )}
+        </fieldset>
+        <button
+            className="rsvp-button rsvp-button--submit"
+            onClick={e => handleSubmit(e)}
+        >
+            submit
+        </button>
         {/*<span className="rsvp-form__loader--wrapper">*/}
         {/*    {addressState.loading && (*/}
         {/*        <span id="loading" className="rsvp-form__loader--indicator"/>*/}
