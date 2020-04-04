@@ -2,7 +2,12 @@ const path = require(`path`);
 
 module.exports = {
     plugins: [
-        `gatsby-plugin-sass`,
+        {
+            resolve: `gatsby-plugin-sass`,
+            options: {
+                includePaths: ["styles"],
+            },
+        },
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,

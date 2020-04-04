@@ -21,15 +21,15 @@ const MapComponent = () => {
         gertrudes.bindPopup("<b>Gertrudes</b><br /><em>10 Art Museum Dr</em><br />Ceremony and reception").openPopup();
 
         var bikeparty = L.marker([39.296, -76.627], {icon: redIcon}).addTo(mapObject);
-        bikeparty.bindPopup("<b>St Mary's Park</b><br /><em>601 N Paca St</em><br />Start of Bike Party")
+        bikeparty.bindPopup("<b>St Mary's Park</b><br /><em>601 N Paca St</em><br />Start of Bike Party");
 
 // accomodations
 
         var revival = L.marker([39.2975, -76.617], {icon: goldIcon});
-        revival.bindPopup("<b>Hotel Revival</b><br /><em>101 W Monument St</em><br />Hotel block reserved")
+        revival.bindPopup("<b>Hotel Revival</b><br /><em>101 W Monument St</em><br />Hotel block reserved");
 
         var daysinn = L.marker([39.287, -76.6203], {icon: goldIcon});
-        daysinn.bindPopup("<b>Days Inn</b><br /><em>100 Hopkins Plaza</em><br />Hotel block reserved")
+        daysinn.bindPopup("<b>Days Inn</b><br /><em>100 Hopkins Plaza</em><br />Hotel block reserved");
 
         var hampden = L.circle([39.330, -76.632], {
             color: "gold",
@@ -37,7 +37,7 @@ const MapComponent = () => {
             fillOpacity: 0.5,
             radius: 700
         });
-        hampden.bindPopup("<b>Hampden</b><br /><em>Neighborhood</em><br />Suggested Airbnb neighborhood")
+        hampden.bindPopup("<b>Hampden</b><br /><em>Neighborhood</em><br />Suggested Airbnb neighborhood");
 
         var vernonmidtown = L.circle([39.305, -76.619], {
             color: "gold",
@@ -49,6 +49,9 @@ const MapComponent = () => {
 
         L.layerGroup([revival, daysinn, hampden, vernonmidtown]).addTo(mapObject);
 
+        return function cleanup() {
+            mapObject.remove();
+        }
     });
 
     return (
