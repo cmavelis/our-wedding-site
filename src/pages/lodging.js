@@ -8,9 +8,18 @@ import withPageContext from "../pageContext";
 import MapComponent from "../maps/MapComponent";
 
 const Lodging = ({ intl }) => {
-    const idBase = [
-        'lodging1',
-        'lodging2',
+    const lodgingSources = [
+        {
+            name: 'Hotel Revival',
+            idBase: 'lodging1',
+            url: 'https://www.hyatt.com/en-US/group-booking/BWIJD/G-OEEY',
+        },
+        {
+            name: 'Days Inn',
+            idBase: 'lodging2',
+            url: 'https://www.wyndhamhotels.com/days-inn/baltimore-maryland/days-inn-baltimore-inner-harbor-hotel/' +
+                'rooms-rates?&checkInDate=09/25/2020&checkOutDate=09/27/2020&groupCode=CG25NG'
+        },
     ];
     const idFields = [
         'description',
@@ -29,24 +38,30 @@ const Lodging = ({ intl }) => {
                     <h1>
                         <FormattedMessage id="page1.title" />
                     </h1>
-                    {idBase.map(
-                        baseString => (
-                            <section key={baseString + '-key'}>
-                                <h3>
+                    {lodgingSources.map(
+                        lodgingSource => {
+                            const baseString = lodgingSource.idBase;
+                            return (
+                                <section key={baseString + '-key'}>
+                                    <h3>
                                     <FormattedMessage id={baseString + '.header'} />
-                                </h3>
-                                <ul className="no-decoration">
-                                {idFields.map(
-                                    fieldString => (
-                                        <li key={baseString + '-' + fieldString + '-key'}>
-                                            <strong>{fieldString.charAt(0).toUpperCase() + fieldString.substring(1) + ': '}</strong>
-                                            <FormattedMessage id={baseString + '.' + fieldString} />
+                                    </h3>
+                                    <ul className="no-decoration">
+                                    {idFields.map(
+                                        fieldString => (
+                                            <li key={baseString + '-' + fieldString + '-key'}>
+                                                <strong>{fieldString.charAt(0).toUpperCase() + fieldString.substring(1) + ': '}</strong>
+                                                <FormattedMessage id={baseString + '.' + fieldString}/>
+                                            </li>
+                                        )
+                                    )}
+                                        <li>
+                                            <a target='_blank' href={lodgingSource.url}>Book Here</a>
                                         </li>
-                                    )
-                                )}
-                                </ul>
-                            </section>
-                        )
+                                    </ul>
+                                </section>
+                            )
+                        }
                     )}
             </main>
                 <div className="flex-grow map-container"><MapComponent/></div>
