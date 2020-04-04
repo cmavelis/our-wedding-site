@@ -1,4 +1,4 @@
-const path = require(`path`)
+const path = require(`path`);
 
 module.exports = {
     plugins: [
@@ -6,6 +6,7 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
+        `gatsby-plugin-layout`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
