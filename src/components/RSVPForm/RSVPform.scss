@@ -11,18 +11,25 @@ $palette-off-white: rgba(243, 217, 177, 1);
     background-image: linear-gradient($top-color, $btm-color);
 
     &:hover {
-        background-image: linear-gradient(darken($top-color, 5%), darken($btm-color, 5%));
+        background-image: linear-gradient(darken($top-color, 10%), darken($btm-color, 10%));
     }
 
     &:active {
-        background-image: linear-gradient(darken($top-color, 10%), darken($btm-color, 10%));
+        background-image: linear-gradient(darken($top-color, 20%), darken($btm-color, 20%));
     }
     &:focus {
         box-shadow: none;
     }
 }
 
+.rsvp-form {
+    &__row {
+        margin-bottom: 10px;
+    }
+}
+
 .rsvp-button {
+    margin-left: 3px;
 
     &--yes {
         @include button-gradient($palette-green);
@@ -34,6 +41,6 @@ $palette-off-white: rgba(243, 217, 177, 1);
         @include button-gradient($palette-orange);
     }
     &--unselected {
-        opacity: 0.5;
+        opacity: 0.35;
     }
 }

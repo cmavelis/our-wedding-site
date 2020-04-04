@@ -15,7 +15,7 @@ const PersonInputGroup = (props) => {
     const {name, rsvp} = personState;
 
     return(
-        <div id='rsvp-form'>
+        <div className='rsvp-form__row'>
             <input
                 name="name"
                 placeholder="Name"
@@ -24,7 +24,7 @@ const PersonInputGroup = (props) => {
             />
             {Object.values(RSVP_TYPES).map(
                 type => {
-                    let buttonClassNames = `rsvp-button--${type}`;
+                    let buttonClassNames = `rsvp-button rsvp-button--${type}`;
                     buttonClassNames = buttonClassNames.concat((type === rsvp) ? '' : ' rsvp-button--unselected' );
                     return (
                         <button
