@@ -80,9 +80,7 @@ const RSVPForm = () => {
     return(
         <form className='rsvp-form'>
             <fieldset disabled={rsvpRequestState.loading ? 'disabled' : ''}>
-                <legend>Please input your email and RSVP for yourself / others</legend>
                 <input type="text" name="email" id="email" placeholder="email" onChange={e => setEmail(e.target.value)}/>
-
             </fieldset>
             <fieldset disabled={rsvpRequestState.loading ? 'disabled' : ''}>
                 {rsvpState.map((obj, i) => {

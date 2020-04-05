@@ -21,7 +21,18 @@ const Index = ({ data }) => {
 
     return(
         <React.Fragment>
-            <Timeline/>
+            <div className="two-columns">
+                <main className="announcement ">
+                    <h3>April 4th Update</h3>
+                    <p>
+                        We're excited to celebrate with you on September 26, 2020. We are hopeful that the coronavirus pandemic will have settled down by September.  We'll be keeping an eye on the news and will update this website and send emails if we have to make any changes to our planned activities.
+                    </p>
+                    <p>
+                        We'd encourage RSVPs right now -- there is a 'maybe' option so you do not have to feel locked in if you're monitoring the coronavirus situation, or are just not sure yet for other reasons.
+                    </p>
+                </main>
+                <Timeline/>
+            </div>
         </React.Fragment>
     );
 };

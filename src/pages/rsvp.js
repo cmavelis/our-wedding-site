@@ -14,9 +14,14 @@ const Rsvp = ({ intl }) => {
             <Helmet>
                 <title>{intl.formatMessage({ id: "page1.title" })}</title>
             </Helmet>
-            <main className="standard-page">
-                <RsvpForm/>
-            </main>
+            <div className="two-columns">
+                <main className="standard-page">
+                    <RsvpForm/>
+                </main>
+                <main className="announcement">
+                    Please use this form to RSVP for yourself and your party. If you are not yet sure, please use the 'maybe' option and we will contact you closer to the date to get an updated response. If you need to update your response at any time between now and August, please just resubmit the form. We will use the email address to send periodic updates. Thanks!
+                </main>
+            </div>
         </React.Fragment>
     );
 };

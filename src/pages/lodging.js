@@ -61,7 +61,7 @@ const Lodging = ({ intl }) => {
                             )
                         }
                     )}
-            </main>
+                </main>
                 <div className="flex-grow map-container"><MapComponent/></div>
             </div>
         </React.Fragment>

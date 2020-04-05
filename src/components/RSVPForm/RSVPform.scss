@@ -23,6 +23,7 @@ $palette-off-white: rgba(243, 217, 177, 1);
 }
 
 .rsvp-form {
+    flex-grow: 1;
     &__row {
         margin-bottom: 10px;
     }

@@ -1,4 +1,5 @@
 $palette-orange: rgba(218, 133, 90, 1);
+$palette-off-white: rgba(243, 217, 177, 1);
 
 html {
     overflow: auto;
@@ -39,15 +40,32 @@ main.standard-page > section {
     text-align: left;
 }
 
+.announcement {
+    margin-top: 1rem;
+    width: 400px;
+    background: $palette-off-white;
+    padding: 1rem;
+    flex-grow: 0;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
 .two-columns {
     display: flex;
     flex-direction: row;
     flex-flow: wrap;
+    align-content: space-around;
+    align-items: flex-start;
+    justify-content: center;
     main {
-        margin: 0 25px;
+        max-width: 500px;
+        margin: 10px 25px;
     }
     div#mapid {
         margin: 0 25px;
+    }
+    > div {
+        margin: 1rem 2rem;
     }
 }
 
