@@ -13,27 +13,35 @@ export const RSVP_FIELD_ACTION_TYPES = {
 
 export const rsvpFormInitialState = [
     {
-        name: 'pers1',
-        rsvp: RSVP_TYPES.MAYBE,
-    },
-    {
-        name: 'person2',
+        name: '',
         rsvp: RSVP_TYPES.YES,
     }
 ];
 
 export const rsvpFormReducer = (state, action) => {
     const oldIndex = action.index;
+    const oldLength = state.length;
     const newState = state;
     switch (action.type) {
         case RSVP_FIELD_ACTION_TYPES.ADD:
-            newState.push([]);
+            newState.push({
+                name: '',
+                rsvp: RSVP_TYPES.YES,
+            });
             break;
         case RSVP_FIELD_ACTION_TYPES.REMOVE:
-            console.log(newState.splice(oldIndex));
+            newState.splice(oldIndex, 1);
             break;
         case RSVP_FIELD_ACTION_TYPES.EDIT_NAME:
             newState[oldIndex].name = action.name;
+            if (action.name === '') {
+                newState.splice(oldIndex, 1); //remove 1
+            } else if (oldIndex === oldLength-1) {
+                newState.push({
+                    name: '',
+                    rsvp: RSVP_TYPES.YES,
+                });
+            }
             break;
         case RSVP_FIELD_ACTION_TYPES.EDIT_RSVP:
             newState[oldIndex].rsvp = action.rsvp;

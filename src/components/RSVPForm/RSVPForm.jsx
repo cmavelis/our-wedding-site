@@ -44,8 +44,7 @@ const PersonInputGroup = (props) => {
 
 const RSVPForm = () => {
     const [email, setEmail] = useState('');
-    // TODO: useReducer for name/rsvp data
-    const [rsvpState, rsvpDispatch] = useReducer(rsvpFormReducer, rsvpFormInitialState);
+    const [rsvpState, rsvpDispatch] = useReducer(rsvpFormReducer, rsvpFormInitialState, state => state);
 
     const onNameChange = (index, name) => rsvpDispatch(
         {
@@ -64,45 +63,55 @@ const RSVPForm = () => {
     );
 
     const apiUrl = 'https://cma-wedding-api.herokuapp.com/';
-    // const addressData = {
-    //     name,
-    //     email,
-    //     address,
-    // };
-    // const [addressState, makeAddressRequest] = useApiRequest(apiUrl + 'address', {verb: 'post', params: addressData});
+    const cleanRsvpData = (rawData) => (
+        rawData.filter(person => person.name !== '')
+    );
+    const rsvpData = {
+        email,
+        rsvps: cleanRsvpData(rsvpState),
+    };
+    const [rsvpRequestState, makeRsvpRequest] = useApiRequest(apiUrl + 'sample', {verb: 'post', params: rsvpData});
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // makeAddressRequest()
+        makeRsvpRequest()
     };
 
     return(
-    <form className="rsvp-form">
-        <fieldset>
-            <legend>Please input your email and RSVP for yourself / others</legend>
-            <input type="text" name="email" id="email" placeholder="email" onChange={e => setEmail(e.target.value)}/>
+        <form className='rsvp-form'>
+            <fieldset disabled={rsvpRequestState.loading ? 'disabled' : ''}>
+                <legend>Please input your email and RSVP for yourself / others</legend>
+                <input type="text" name="email" id="email" placeholder="email" onChange={e => setEmail(e.target.value)}/>
 
-        </fieldset>
-        {rsvpState.map((obj, i) => {
-                return <PersonInputGroup
-                    key={`personInputs-${i}`}
-                    handleNameChange={onNameChange.bind(null, i)}
-                    handleRsvpChange={onRsvpChange.bind(null, i)}
-                    personState={obj}
-                />
-            }
-        )}
-        {/*<button onClick={e => handleSubmit(e)} >submit</button>*/}
-        {/*<span className="rsvp-form__loader--wrapper">*/}
-        {/*    {addressState.loading && (*/}
-        {/*        <span id="loading" className="rsvp-form__loader--indicator"/>*/}
-        {/*    )}*/}
-        {/*</span>*/}
-        {/*<div className="rsvp-form__submit-message">*/}
-        {/*    {addressState.updateSuccess && "Your information was submitted. Thanks!"}*/}
-        {/*    {addressState.errorMessage && "There was an error submitting your info. Please try again or email us."}*/}
-        {/*</div>*/}
-    </form>
+            </fieldset>
+            <fieldset disabled={rsvpRequestState.loading ? 'disabled' : ''}>
+                {rsvpState.map((obj, i) => {
+                        return <PersonInputGroup
+                            key={`personInputs-${i}`}
+                            handleNameChange={onNameChange.bind(null, i)}
+                            handleRsvpChange={onRsvpChange.bind(null, i)}
+                            personState={obj}
+                        />
+                    }
+                )}
+                <button
+                    className="rsvp-button rsvp-button--submit"
+                    onClick={e => handleSubmit(e)}
+                >
+                    submit
+                </button>
+            </fieldset>
+
+            <span className="rsvp-form__loader--wrapper">
+                {rsvpRequestState.loading && (
+                    <span id="loading" className="rsvp-form__loader--indicator"/>
+                )}
+            </span>
+            <div className="rsvp-form__submit-message">
+                {rsvpRequestState.updateSuccess && "Your information was submitted. Thanks!"}
+                {rsvpRequestState.errorMessage && "There was an error submitting your info. Please try again or email us."}
+            </div>
+        </form>
     )
 };
 
