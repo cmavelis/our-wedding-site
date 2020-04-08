@@ -1,12 +1,35 @@
 import React, {useEffect} from "react";
+// import { Map } from 'react-leaflet'
+
 import L from "leaflet";
 
-import mapFunction, {goldIcon, orangeIcon, redIcon} from "./maps.js";
+// import mapFunction, {goldIcon, orangeIcon, redIcon} from "./maps.js";
 import "leaflet/dist/leaflet.css";
 import "./map.scss";
 
+
+// export default class MyMap extends Component {
+//     render() {
+//         const { options } = this.props
+//
+//         if (typeof window !== 'undefined') {
+//             return (
+//                 <Map {...options}>
+//                     {/* Map code goes here */}
+//                 </Map>
+//             )
+//         }
+//         return null
+//     }
+// }
+
 const MapComponent = () => {
-    useEffect(() => {
+    if (typeof window !== 'undefined') {
+        const L = import("leaflet");
+        const mapsFile = import("./maps.js")
+        const {goldIcon, redIcon} = mapsFile;
+
+        useEffect(() => {
         let mapObject = L.map("mapid").setView([39.31, -76.61], 13);
 
         // mapFunction(mapObject)
@@ -54,11 +77,14 @@ const MapComponent = () => {
         }
     });
 
-    return (
-        <div id="mapid">
+        return (
+            <div id="mapid">
 
-        </div>
-    )
+            </div>
+        )
+    }
+    return null
+
 };
 
 export default MapComponent;
