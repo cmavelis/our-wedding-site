@@ -17,27 +17,30 @@ const PersonInputGroup = (props) => {
     return(
         <div className='rsvp-form__row'>
             <input
+                className='rsvp-form__name-input'
                 name="name"
                 placeholder="name"
                 value={name}
                 onChange={e => handleNameChange(e.target.value)}
             />
-            {Object.values(RSVP_TYPES).map(
-                type => {
-                    let buttonClassNames = `rsvp-button rsvp-button--${type}`;
-                    buttonClassNames = buttonClassNames.concat((type === rsvp) ? '' : ' rsvp-button--unselected' );
-                    return (
-                        <button
-                            className={buttonClassNames}
-                            key={`button-type-${type}`}
-                            type="button"
-                            onClick={() => handleRsvpChange(type)}
-                        >
-                            {type}
-                        </button>
-                    )
-                }
-            )}
+            <div className='rsvp-form__button-group'>
+                {Object.values(RSVP_TYPES).map(
+                    type => {
+                        let buttonClassNames = `rsvp-button rsvp-button--${type}`;
+                        buttonClassNames = buttonClassNames.concat((type === rsvp) ? '' : ' rsvp-button--unselected' );
+                        return (
+                            <button
+                                className={buttonClassNames}
+                                key={`button-type-${type}`}
+                                type="button"
+                                onClick={() => handleRsvpChange(type)}
+                            >
+                                {type}
+                            </button>
+                        )
+                    }
+                )}
+            </div>
         </div>
     )
 };

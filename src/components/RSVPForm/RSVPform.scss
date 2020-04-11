@@ -27,6 +27,15 @@ $palette-off-white: rgba(243, 217, 177, 1);
     &__row {
         margin-bottom: 10px;
     }
+    &__name-input {
+        width: 8rem;
+        //border: $palette-orange 1px solid;
+    }
+    &__button-group {
+        display: inline-block;
+        margin-bottom: 10px;
+        white-space: nowrap;
+    }
 }
 
 .rsvp-button {

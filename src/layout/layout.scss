@@ -17,6 +17,12 @@ $footer-height: 3.0rem;
     height: 100%;
 }
 
+@media only screen and (max-width: 1024px) {
+    #content-wrap {
+        background: rgba(255, 255, 255, 1);
+    }
+}
+
 #footer {
     position: absolute;
     bottom: 0;

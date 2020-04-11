@@ -31,7 +31,7 @@ ul.no-decoration {
 
 main.standard-page {
     margin: 0 auto;
-    max-width: 80%;
+    max-width: 90%;
 }
 
 main.standard-page > section {
@@ -59,7 +59,7 @@ main.standard-page > section {
     justify-content: center;
     main {
         max-width: 500px;
-        margin: 10px 25px;
+        margin: 10px;
     }
     div#mapid {
         margin: 0 25px;
@@ -90,6 +90,13 @@ button, input, textarea {
         outline: none;
         box-shadow: 0 0 0 3px lighten($palette-orange, 20%);
     }
+}
+
+input {
+    background: lighten($palette-off-white, 10%);
+    border: none;
+    box-shadow: 0 0 0 1px lighten($palette-orange, 20%);
+    margin: 0 5px;
 }
 
 h3 > a {
