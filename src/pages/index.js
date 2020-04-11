@@ -23,7 +23,7 @@ const Index = ({ data }) => {
         <React.Fragment>
             <div className="two-columns">
                 <main className="announcement ">
-                    <h3>April 4th Update</h3>
+                    <h3>April 11th Update</h3>
                     <p>
                         We're excited to celebrate with you on September 26, 2020. We are hopeful that the coronavirus pandemic will have settled down by September.  We'll be keeping an eye on the news and will update this website and send emails if we have to make any changes to our planned activities.
                     </p>

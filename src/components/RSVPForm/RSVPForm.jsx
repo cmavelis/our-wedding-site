@@ -18,7 +18,7 @@ const PersonInputGroup = (props) => {
         <div className='rsvp-form__row'>
             <input
                 name="name"
-                placeholder="Name"
+                placeholder="name"
                 value={name}
                 onChange={e => handleNameChange(e.target.value)}
             />
