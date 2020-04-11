@@ -1,6 +1,6 @@
 import L from "leaflet";
 
-import {eventInfo, accomodationsInfo, drinkInfo, neighborhoodInfo, redIcon, goldIcon, orangeIcon} from "./mapData";
+import {eventInfo, accomodationsInfo, drinkInfo, neighborhoodInfo, iconSettings} from "./mapData";
 
 var mapObject = L.map("mapid").setView([39.31, -76.61], 13);
 

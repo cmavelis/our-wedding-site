@@ -1,36 +1,21 @@
-import L from "leaflet";
-
-export var redIcon = new L.Icon({
-    iconUrl: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png",
+export var iconSettings = {
     shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
     shadowSize: [41, 41]
-});
+};
 
-export var goldIcon = new L.Icon({
-    iconUrl: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png",
-    shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-});
-
-export var orangeIcon = new L.Icon({
-    iconUrl: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png",
-    shadowUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png",
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34],
-    shadowSize: [41, 41]
-});
+export var iconColorUrls = {
+    red: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png",
+    gold: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png",
+    orange: "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-orange.png",
+};
 
 export var eventInfo = {
     gertrudes: {
         coordinates: [39.326, -76.619],
-        icon: redIcon,
+        icon: 'red',
         name: 'Gertrude\'s',
         address: "10 Art Museum Dr",
         link: "",
@@ -39,7 +24,7 @@ export var eventInfo = {
     },
     bikeParty: {
         coordinates: [39.296, -76.627],
-        icon: redIcon,
+        icon: 'red',
         name: 'St Mary\'s Park',
         address: "601 N Paca St",
         link: "",
@@ -51,7 +36,7 @@ export var eventInfo = {
 export var accomodationsInfo = {
     revival: {
         coordinates: [39.2975, -76.617],
-        icon: goldIcon,
+        icon: 'gold',
         name: 'Hotel Revival',
         address: "101 W Monument St",
         link: "",
@@ -60,7 +45,7 @@ export var accomodationsInfo = {
     },
     daysInn: {
         coordinates: [39.287, -76.6203],
-        icon: goldIcon,
+        icon: 'red',
         name: 'Days Inn',
         address: "100 Hopkins Plaza",
         link: "",
