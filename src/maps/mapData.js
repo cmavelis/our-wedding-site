@@ -45,7 +45,7 @@ export var accomodationsInfo = {
     },
     daysInn: {
         coordinates: [39.287, -76.6203],
-        icon: 'red',
+        icon: 'gold',
         name: 'Days Inn',
         address: "100 Hopkins Plaza",
         link: "",
