@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Helmet from "react-helmet";
 import { injectIntl, intlShape } from "react-intl";
 import { compose } from "recompose";
@@ -6,9 +6,16 @@ import { compose } from "recompose";
 import withLayout from "../layout";
 import withPageContext from "../pageContext";
 import RsvpForm from "../components/RSVPForm"
+import useApiRequest from "../common/useApiRequest";
 
 
 const Rsvp = ({ intl }) => {
+    const [wakeUpState, wakeUpRequest] = useApiRequest('https://cma-wedding-api.herokuapp.com/', {verb: 'get'});
+    useEffect(() => {
+        if (!wakeUpState.loading && !wakeUpState.updateSuccess && !wakeUpState.errorMessage) {
+            wakeUpRequest()
+        }
+    });
     return(
         <React.Fragment>
             <Helmet>
