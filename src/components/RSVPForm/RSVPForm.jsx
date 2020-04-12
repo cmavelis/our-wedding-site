@@ -73,7 +73,7 @@ const RSVPForm = () => {
         email,
         rsvps: cleanRsvpData(rsvpState),
     };
-    const [rsvpRequestState, makeRsvpRequest] = useApiRequest(apiUrl + 'sample', {verb: 'post', params: rsvpData});
+    const [rsvpRequestState, makeRsvpRequest] = useApiRequest(apiUrl + 'rsvp', {verb: 'post', params: rsvpData});
 
     const handleSubmit = (e) => {
         e.preventDefault();
